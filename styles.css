@@ -1,0 +1,141 @@
+// CSS 2
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centering the content */
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background:linear-gradient(#ffffff,#f59de0);
+    flex-direction: column;
+    font-family: Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-45deg);
+}
+
+.heart:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    top: -50px;
+    left: 0;
+}
+
+
+.heart:after {
+    content:"";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    left: 50px;
+    top: 0px;
+}
+
+.small-heart {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    animation: none;
+}
+
+/* Explosion animation for main heart */
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(5);
+        opacity: 0;
+    }
+}
+
+/* Animation for small hearts during explosion */
+@keyframes smallHeartExplosion {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5) translate(var(--x), var(--y)); /* Adjust to control explosion direction */
+        opacity: 0;
+    }
+}
+
+.message {
+    display: none;
+    font-size: 2rem;
+    color: red;
+    margin-top: 20px;
+    font-weight: bold;
+    font-family: Verdana, sans-serif;
+}
+
+#pig-kisses {
+    display: none;
+    width: 200px;
+    margin-top: 20px;
+}
+
+.small-heart1 {
+    left: 30px;
+    top: -10px;
+    --x: 50px;
+    --y: -150px;
+}
+
+.small-heart2 {
+    left: 60px;
+    top: 20px;
+    --x: -50px;
+    --y: -150px;
+}
+
+.small-heart3 {
+    left: 10px;
+    top: 40px;
+    --x: 70px;
+    --y: -150px;
+}
+
+.small-heart4 {
+    left: 50px;
+    top: 60px;
+    --x: -70px;
+    --y: -150px;
+}
+
+
+
+
