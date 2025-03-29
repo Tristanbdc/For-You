@@ -136,45 +136,6 @@ h1 {
     --y: -150px;
 }
 
-/* For small screens like phones */
-@media (max-width: 600px) {
-    body {
-        font-size: 1.2rem; /* Adjust font size for mobile */
-    }
-
-    .heart {
-        width: 80px;
-        height: 80px; /* Smaller heart on mobile */
-    }
-
-    .message {
-        font-size: 1.5rem; /* Adjust message font size */
-    }
-
-    #pig-kisses {
-        width: 150px; /* Resize GIF for mobile */
-    }
-}
-
-/* For larger screens like tablets and desktops */
-@media (min-width: 601px) {
-    body {
-        font-size: 1.6rem; /* Larger font size for bigger screens */
-    }
-
-    .heart {
-        width: 100px;
-        height: 100px; /* Normal size for larger screens */
-    }
-
-    .message {
-        font-size: 2rem;
-    }
-
-    #pig-kisses {
-        width: 200px; /* Larger GIF for bigger screens */
-    }
-}
 
 
 
